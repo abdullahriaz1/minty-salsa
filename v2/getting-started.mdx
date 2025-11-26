@@ -261,7 +261,8 @@ Supported distributors:
 
 Connect v2.0 with your enterprise resource planning system:
 
-```python
+<CodeGroup dropdown>
+```python erpconnect.py
 # Example: ERP integration configuration
 from salsa_sdk import SalsaClient
 
@@ -287,6 +288,63 @@ erp_connection = client.integrations.connect_erp(
 print(f"ERP connected: {erp_connection.status}")
 ```
 
+```javascript erpconnect.js
+import { SalsaClient } from 'salsa_sdk';
+
+const jsClient = new SalsaClient({ apiKey: "your_api_key" });
+
+const jsErpConnection = jsClient.integrations.connectErp({
+  system: "sap",
+  credentials: {
+    host: "erp.yourcompany.com",
+    client: "100",
+    username: "SALSA_INT",
+    authType: "oauth"
+  },
+  syncOptions: {
+    inventory: true,
+    procurement: true,
+    costAccounting: true,
+    frequency: "real-time"
+  }
+});
+
+console.log(`ERP connected: ${jsErpConnection.status}`);
+
+```
+```java erpconnect.java
+import salsa_sdk.SalsaClient;
+import java.util.Map;
+import java.util.HashMap;
+
+public class ConnectAll {
+    public static void main(String[] args) {
+        SalsaClient javaClient = new SalsaClient("your_api_key");
+
+        Map<String, Object> credentials = new HashMap<>();
+        credentials.put("host", "erp.yourcompany.com");
+        credentials.put("client", "100");
+        credentials.put("username", "SALSA_INT");
+        credentials.put("auth_type", "oauth");
+
+        Map<String, Object> syncOptions = new HashMap<>();
+        syncOptions.put("inventory", true);
+        syncOptions.put("procurement", true);
+        syncOptions.put("cost_accounting", true);
+        syncOptions.put("frequency", "real-time");
+
+        Map<String, Object> erpConnection = javaClient.integrations().connectErp(
+            "sap",
+            credentials,
+            syncOptions
+        );
+
+        System.out.println("ERP connected: " + erpConnection.get("status"));
+    }
+}
+
+```
+</CodeGroup>
 ## First Production Run with AI
 
 Once your setup is complete, start your first AI-enhanced production run:
