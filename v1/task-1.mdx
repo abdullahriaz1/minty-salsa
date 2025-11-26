@@ -4,15 +4,21 @@ description: "My approach to completing Task 1"
 ---
 
 ## Your decision-making process
-- Decision 1: where to start 
-- started with how to organize navbar 
-- searched the Mintlify documentation for "translation" and found "Navigation > Languages" 
-- compared with original docs.json and tried 
+
+- **Researched Mintlify documentation**: Searched for "multilanguage support" which led to the Navigation > Languages page, then evaluated `languages > groups > version` hierarchy versus a flat 4-group structure (en/fr × v1/v2)
+- **Chose hierarchical structure with version dropdown**: Prioritized end-user simplification by isolating languages and using a dropdown for version switching to reduce navigation clutter
+
 ## Key user experience improvements
+
+- **Language isolation**: Users only see documentation in their selected language, eliminating irrelevant content and reducing cognitive load
+- **Clean version switching**: Dropdown menu provides quick access to v1/v2 without cluttering the sidebar with duplicate navigation entries
+
 ## Any trade-offs you considered
+
+- **Version dropdown vs. sidebar sections**: Chose dropdown despite potential benefits of side-by-side comparison for migrating users, since most users focus on one version at a time
+- **Hierarchical vs. flat structure**: Selected hierarchical approach over simpler flat structure (4 separate groups) because it scales better with additional languages or versions
+
 ## How your structure scales for future growth
 
-How do you research and apply Mintlify's documentation?
-What trade-offs do you consider when making UX decisions?
-How do you communicate your reasoning?
-
+- **Easy expansion**: New languages, versions, or content sections can be added without restructuring existing content or affecting other parts of the documentation
+- **Maintainability**: Clear separation prevents cross-language edits, version dropdown extends to v3+, and structure supports partial translations

@@ -15,7 +15,7 @@
         "dropdowns": [
           {
             "dropdown": "V1",
-            "icon": "fish",
+            "icon": "chevron-right",
             "pages": [
               "v1/index",
               "v1/getting-started",
@@ -29,7 +29,7 @@
           },
           {
             "dropdown": "V2",
-            "icon": "soup",
+            "icon": "chevrons-right",
             "pages": [
               "v2/index",
               "v2/advanced-usage",
@@ -46,9 +46,10 @@
           },
           {
             "dropdown": "Abdullah Files",
-            "icon": "flag",
+            "icon": "chess-rook",
             "pages": [
-              "v1/task-1"
+              "v1/task-1",
+              "v1/task-2"
             ]
           }
         ]
@@ -58,7 +59,7 @@
         "dropdowns": [
           {
             "dropdown": "V1",
-            "icon": "fish",
+            "icon": "chevrons-right",
             "pages": [
               "fr/v1/index",
               "fr/v1/getting-started",
@@ -72,7 +73,7 @@
           },
           {
             "dropdown": "V2",
-            "icon": "soup",
+            "icon": "chevrons-right",
             "pages": [
               "fr/v2/index",
               "fr/v2/advanced-usage",
